@@ -1,28 +1,33 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Counter from './components/Counter'; 
-
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';// Correct path to Counter component
+import Todo from './components/Todo';
 
 function App() {
   return (
     <Router>
-    <div>
-      
-        <div><h1>Welcome to my small projects!</h1></div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/Counter">Counter</Link>
-            </li>
-          </ul>
-        </nav>
-        <Routes>
-          <Route path='/Counter' element={<Counter />}></Route>
-        </Routes>
-      
+      <Routes>
+        {/* Landing page route */}
+        <Route path="/" element={
+          <div>
+            <h1>Welcome to my small projects!</h1>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/Counter">Counter</Link>
+                </li>
+                <li>
+                  <Link to="/Todo">Todo</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        } />
 
-      
-    </div>
+        {/* Project pages */}
+        <Route path="/Counter" element={<Counter />} />
+        <Route path="/Todo" element={<Todo />} />
+      </Routes>
     </Router>
   );
 }
