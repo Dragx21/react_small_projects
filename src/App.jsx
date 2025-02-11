@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Counter from './components/Counter'; 
 import Todo from './components/Todo';
 import Meals from './components/Meals';
+import Calculator from './components/Calculator';
 
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
                 <li>
                   <Link to="/Meals">Meals</Link>
                 </li>
+                <li>
+                  <Link to="/Calculator">Calculator</Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -33,6 +37,7 @@ function App() {
         <Route path="/Counter" element={<Counter />} />
         <Route path="/Todo" element={<Todo />} />
         <Route path="/Meals" element={<Meals />} />
+        <Route path="/Calculator" element={<Calculator />} />
         
       </Routes>
     </Router>
