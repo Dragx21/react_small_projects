@@ -5,6 +5,7 @@ import Todo from './components/Todo';
 import Meals from './components/Meals';
 import Calculator from './components/Calculator';
 import ColorTogle from './components/ColorTogle';
+import HiddenSearch from './components/HiddenSearch';
 
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
                 <li>
                   <Link to="/ColorTogle">ColorTogle</Link>
                 </li>
+                <li>
+                  <Link to="HiddenSearch">HiddenSearch</Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -43,6 +47,7 @@ function App() {
         <Route path="/Meals" element={<Meals />} />
         <Route path="/Calculator" element={<Calculator />} />
         <Route path="/ColorTogle" element={<ColorTogle />} />
+        <Route path="/HiddenSearch" element={<HiddenSearch/>} />
         
         
       </Routes>
