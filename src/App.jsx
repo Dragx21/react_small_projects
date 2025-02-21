@@ -4,6 +4,7 @@ import Counter from './components/Counter';
 import Todo from './components/Todo';
 import Meals from './components/Meals';
 import Calculator from './components/Calculator';
+import ColorTogle from './components/ColorTogle';
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
                 <li>
                   <Link to="/Calculator">Calculator</Link>
                 </li>
+                <li>
+                  <Link to="/ColorTogle">ColorTogle</Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -38,6 +42,8 @@ function App() {
         <Route path="/Todo" element={<Todo />} />
         <Route path="/Meals" element={<Meals />} />
         <Route path="/Calculator" element={<Calculator />} />
+        <Route path="/ColorTogle" element={<ColorTogle />} />
+        
         
       </Routes>
     </Router>
