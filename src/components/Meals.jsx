@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import "../styles/Style.css";
+import styles from '../styles/Style.module.css';
 
 const Meals = () => {
   const [meal, setMeal] = useState([]);

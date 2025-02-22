@@ -17,7 +17,7 @@ const ColorTogle = () => {
   return (
     <section style={{ backgroundColor: background, color: text }}>
     <div >
-    <button 
+    <button className='change'
         style={{ backgroundColor: buttonstyle }} 
         onClick={handleSubmit}
     >

@@ -1,5 +1,5 @@
 import React ,{useState}from 'react'
-import '../styles/Style.css';
+import styles from '../styles/Style.module.css';
 function generateId() {
   return Math.floor(Math.random() * 10);
 }

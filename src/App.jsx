@@ -1,11 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import HiddenSearch from './components/HiddenSearch';
+import ColorTogle from './components/ColorTogle';
 import Counter from './components/Counter'; 
 import Todo from './components/Todo';
 import Meals from './components/Meals';
+import Quotes from './components/Quotes';
 import Calculator from './components/Calculator';
-import ColorTogle from './components/ColorTogle';
-import HiddenSearch from './components/HiddenSearch';
+
+
 
 
 function App() {
@@ -34,7 +37,10 @@ function App() {
                   <Link to="/ColorTogle">ColorTogle</Link>
                 </li>
                 <li>
-                  <Link to="HiddenSearch">HiddenSearch</Link>
+                  <Link to="/HiddenSearch">HiddenSearch</Link>
+                </li>
+                <li>
+                  <Link to="/Quotes">Quotes</Link>
                 </li>
               </ul>
             </nav>
@@ -47,7 +53,8 @@ function App() {
         <Route path="/Meals" element={<Meals />} />
         <Route path="/Calculator" element={<Calculator />} />
         <Route path="/ColorTogle" element={<ColorTogle />} />
-        <Route path="/HiddenSearch" element={<HiddenSearch/>} />
+        <Route path="/HiddenSearch" element={<HiddenSearch />} />
+        <Route path="/Quotes" element={<Quotes />} />
         
         
       </Routes>
