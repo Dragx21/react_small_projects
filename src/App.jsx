@@ -7,6 +7,8 @@ import Todo from './components/Todo';
 import Meals from './components/Meals';
 import Quotes from './components/Quotes';
 import Calculator from './components/Calculator';
+import Accordion from './components/Accordian';
+
 
 
 
@@ -42,6 +44,9 @@ function App() {
                 <li>
                   <Link to="/Quotes">Quotes</Link>
                 </li>
+                <li>
+                  <Link to="/Accordion">Accordion</Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -55,6 +60,7 @@ function App() {
         <Route path="/ColorTogle" element={<ColorTogle />} />
         <Route path="/HiddenSearch" element={<HiddenSearch />} />
         <Route path="/Quotes" element={<Quotes />} />
+        <Route path="/Accordion" element={<Accordion />}/>
         
         
       </Routes>
