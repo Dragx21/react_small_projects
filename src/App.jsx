@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Form } from 'react-router-dom';
 import HiddenSearch from './components/HiddenSearch';
 import ColorTogle from './components/ColorTogle';
 import Counter from './components/Counter'; 
@@ -8,6 +8,7 @@ import Meals from './components/Meals';
 import Quotes from './components/Quotes';
 import Calculator from './components/Calculator';
 import Accordion from './components/Accordian';
+import FormValidation from './components/FormValidation';
 
 
 
@@ -47,11 +48,14 @@ function App() {
                 <li>
                   <Link to="/Accordion">Accordion</Link>
                 </li>
+                <li>
+                  <Link to="/FormValidation">FormValidation</Link>
+                </li>
               </ul>
             </nav>
           </div>
         } />
-
+           
         {/* Project pages */}
         <Route path="/Counter" element={<Counter />} />
         <Route path="/Todo" element={<Todo />} />
@@ -61,6 +65,10 @@ function App() {
         <Route path="/HiddenSearch" element={<HiddenSearch />} />
         <Route path="/Quotes" element={<Quotes />} />
         <Route path="/Accordion" element={<Accordion />}/>
+        <Route path="FormValidation" element={<FormValidation />}/>
+        
+        
+        
         
         
       </Routes>
