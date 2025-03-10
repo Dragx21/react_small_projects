@@ -33,7 +33,7 @@
     align-items: center;
   }
   
-  .place {
+  #place {
     padding: 10px 10px;
     margin: 5px;
     width: 20rem;
@@ -41,6 +41,9 @@
     border: none;
     border-bottom: 1px solid #ccc;
     outline: none;
+    color: #4a4a4a;
+
+
   }
   
   .error {
@@ -48,7 +51,7 @@
     color: red;
   }
   
-  .submit-btn {
+  .submitBtn {
     width: 80%;
     margin-top: 20px;
     padding: 10px 20px;
