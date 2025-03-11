@@ -16,14 +16,37 @@ const Form = () => {
   const [emailColor, setEmailColor] = useState('');
   const [passwordColor, setPasswordColor] = useState('');
   const [confirmColor, setConfirmColor] = useState('');
-  function validate(){}
 
+  function validate(e){
+    e.preventDefault();
+    if(user.length>8){
+      setErrorUser("")
+      setUserColor("green");
+    }
+    else{
+      setErrorUser("Username must be greater than 8 ");
+      setUserColor("red");
+    }
+    if (password.length < 6) {
+      setErrorPassword("Password must be at least 6 characters");
+      setPasswordColor("red");
+    } else {
+      setErrorPassword("");
+      setPasswordColor("green");
+    }
+    if (password !== "" && password === confirm) {
+      setErrorConfirm("");
+      setConfirmColor("green");
+    } else {
+      setErrorConfirm("Passwords didn't match.");
+      setConfirmColor("red");
+    }
+  }
 
   return (
     <div className={styles.main}> 
       <div className={styles.card}> 
         <div className={styles.cardimage1}> 
-          
         </div>
         <form className={styles.box}>
             <input type="text" placeholder='Name' value={user} 
@@ -48,14 +71,10 @@ const Form = () => {
           onChange={(e)=>setConfirm(e.target.value)}/>
           <p className={styles.error}>{errorConfirm}</p>
            
-           
           <button className={styles.submitBtn}  onClick={validate} >
             Submit
           </button>
-          
-
-          
-          </form>
+        </form>
       </div>
     </div>
   );
